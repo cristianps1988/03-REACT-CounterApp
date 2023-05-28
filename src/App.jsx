@@ -23,4 +23,8 @@ App.propTypes = {
     edad: PropTypes.number.isRequired
 }
 
+App.defaultProps = {
+    title: 'Hola mundo'
+}
+
 export default App
