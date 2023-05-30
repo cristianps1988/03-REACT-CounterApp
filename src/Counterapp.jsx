@@ -8,6 +8,14 @@ const Counterapp = ({ value }) => {
         setValor(valor + 1)
     }
 
+    const handleLess = () => {
+        setValor(valor - 1)
+    }
+
+    const handleReset = () => {
+        setValor(value)
+    }
+
     return (
         <>
             <h1>CounterApp</h1>
@@ -16,6 +24,16 @@ const Counterapp = ({ value }) => {
                 onClick={handleAdd}
             >
                 +1
+            </button>
+            <button
+                onClick={handleLess}
+            >
+                -1
+            </button>
+            <button
+                onClick={handleReset}
+            >
+                Reset
             </button>
         </>
     )
@@ -26,7 +44,7 @@ Counterapp.propTypes = {
 }
 
 Counterapp.defaultProps = {
-    value: 1
+    value: 0
 }
 
 export default Counterapp
